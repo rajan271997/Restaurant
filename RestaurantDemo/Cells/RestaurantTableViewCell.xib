@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestaurantTableViewCell" rowHeight="172" id="KGk-i7-Jjw" customClass="RestaurantTableViewCell" customModule="RestaurantDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="317" height="172"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="317" height="172"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exj-w1-i6n">
+                        <rect key="frame" x="16" y="15" width="74" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5b-VN-qSg">
+                        <rect key="frame" x="243" y="11" width="54" height="29"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                        <state key="normal" title="View all ">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0ZU-E0-dNv">
+                        <rect key="frame" x="16" y="44" width="301" height="128"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="akd-fF-ic5">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="h5b-VN-qSg" secondAttribute="trailing" constant="20" id="1PC-Fh-qWq"/>
+                    <constraint firstItem="0ZU-E0-dNv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="56Q-ED-ppV"/>
+                    <constraint firstItem="h5b-VN-qSg" firstAttribute="centerY" secondItem="Exj-w1-i6n" secondAttribute="centerY" id="8pY-zh-WAk"/>
+                    <constraint firstItem="Exj-w1-i6n" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="AYI-9B-Awn"/>
+                    <constraint firstAttribute="bottom" secondItem="0ZU-E0-dNv" secondAttribute="bottom" id="CKj-QC-bgb"/>
+                    <constraint firstItem="0ZU-E0-dNv" firstAttribute="top" secondItem="h5b-VN-qSg" secondAttribute="bottom" constant="4" id="SCi-ES-JYx"/>
+                    <constraint firstItem="Exj-w1-i6n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="YSK-Lb-mke"/>
+                    <constraint firstAttribute="trailing" secondItem="0ZU-E0-dNv" secondAttribute="trailing" id="jat-L9-Yvl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="categoryLabel" destination="Exj-w1-i6n" id="x8a-OU-sen"/>
+                <outlet property="collectionView" destination="0ZU-E0-dNv" id="Jy4-9R-7ly"/>
+            </connections>
+            <point key="canvasLocation" x="129.71014492753625" y="172.76785714285714"/>
+        </tableViewCell>
+    </objects>
+</document>
